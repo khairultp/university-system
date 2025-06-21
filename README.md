@@ -3,7 +3,7 @@
 Traditional Monolith: Process Flow
 This diagram illustrates how a user request flows through the different technical layers of the traditional monolith application. It specifically highlights the tight coupling within the service layer, where services often directly access the repositories of different domains, creating a "Big Ball of Mud."
 
-![Module Architecture](module.png)
+![Module Architecture](course-registration.png)
 
 Consequences of This Approach:
 - Tight Coupling: AcademicService "knows too much" about the implementation details of the Finance module (the Bill table) and the Student Affairs module (the Student table).
