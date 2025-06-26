@@ -16,20 +16,23 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-kafka</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.university</groupId>
             <artifactId>module-student-affairs</artifactId>
-            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.university</groupId>
             <artifactId>module-finance</artifactId>
-            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.university</groupId>
-            <artifactId>module-notifications</artifactId>
-            <version>${project.parent.version}</version>
+            <artifactId>module-api</artifactId>
         </dependency>
+
         <!-- SpringDoc OpenAPI for Swagger documentation -->
         <dependency>
             <groupId>org.springdoc</groupId>

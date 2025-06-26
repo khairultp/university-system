@@ -1,5 +1,6 @@
 package com.university.notifications.service;
 
+import com.university.notifications.api.NotificationService;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -9,4 +10,5 @@ class NotificationServiceImpl implements NotificationService {
         // In a real app, this would use an email/SMS client.
         System.out.printf("SUCCESS: Notification sent to %s. Subject: %s. Message: %s%n", recipient, subject, message);
     }
+
 }

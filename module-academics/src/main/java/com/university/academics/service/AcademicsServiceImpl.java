@@ -3,7 +3,7 @@ package com.university.academics.service;
 import com.university.academics.exception.StudentNotActiveException;
 import com.university.finance.exception.OutstandingPaymentsException;
 import com.university.finance.service.FinanceService;
-import com.university.notifications.service.NotificationService;
+import com.university.notifications.api.NotificationService;
 import com.university.studentaffairs.exception.StudentNotFoundException;
 import com.university.studentaffairs.entity.Student;
 import com.university.studentaffairs.service.StudentAffairsService;
@@ -17,10 +17,13 @@ class AcademicsServiceImpl implements AcademicsService {
     private final FinanceService financeService;
     private final NotificationService notificationService;
 
-    public AcademicsServiceImpl(StudentAffairsService s, FinanceService f, NotificationService n) {
-        this.studentAffairsService = s;
-        this.financeService = f;
-        this.notificationService = n;
+    public AcademicsServiceImpl(StudentAffairsService studentAffairsService,
+                                FinanceService financeService,
+                                NotificationService notificationService) {
+
+        this.studentAffairsService = studentAffairsService;
+        this.financeService = financeService;
+        this.notificationService = notificationService;
     }
 
     @Override

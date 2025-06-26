@@ -13,20 +13,50 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>modular-monolith-univ</name>
+    <name>modular-monolith-university</name>
     <description>Parent POM for the Modular Monolith Univ</description>
 
     <properties>
         <java.version>21</java.version>
+        <spring-cloud.version>2025.0.0</spring-cloud.version>
     </properties>
 
     <modules>
         <module>module-student-affairs</module>
         <module>module-finance</module>
-        <module>module-notifications</module>
+        <module>module-api</module>
         <module>module-academics</module>
         <module>application</module> <!-- The runnable application -->
+        <module>notifications-service</module> <!-- Standalone notifications microservice -->
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.university</groupId>
+                <artifactId>module-student-affairs</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.university</groupId>
+                <artifactId>module-finance</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.university</groupId>
+                <artifactId>module-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
