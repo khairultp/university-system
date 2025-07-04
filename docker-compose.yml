@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: university-system
+    ports:
+      - "8080:8080"
+    volumes:
+      - app-data:/app/data
+
+volumes:
+  app-data:
+    driver: local

@@ -1,0 +1,37 @@
+# Maven build directories
+**/target/
+
+# Git files
+.git/
+.gitignore
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.sublime-*
+.project
+.classpath
+.settings/
+
+# Logs
+*.log
+logs/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Other unnecessary files
+*.md
+!README.md
+*.png
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Keep the application jar that's needed for the runtime stage
+!application/target/application-0.0.1-SNAPSHOT.jar
